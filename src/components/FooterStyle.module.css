@@ -1,0 +1,95 @@
+.footerContainer {
+  background: linear-gradient(25deg, #005683 25.94%, #238abe 75.96%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.upper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 40px;
+  gap: 2.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.textHolder h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.textHolder h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.textHolder p {
+  font-size: 1rem;
+  max-width: 400px;
+}
+.buttonHolder {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.rightHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.down {
+  display: flex;
+  padding-top: 100px;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-around;
+}
+.listHolder {
+  display: flex;
+  gap: 3rem;
+}
+.listHolder ul {
+  list-style-type: none;
+}
+.listHolder li:hover{
+    scale: 0.95;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.listHolder li img:hover{
+    scale: 1.1;
+}
+@media only screen and (max-width: 1024px) {
+    .down {
+        display: flex;
+        padding-top: 100px;
+        align-items: center;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .listHolder {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+      }
+      .listHolder ul {
+        list-style-type: none;
+      }
+      
+}
