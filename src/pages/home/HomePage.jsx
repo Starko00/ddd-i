@@ -11,8 +11,9 @@ import client7 from "./../../assets/clientLogo7.png";
 import client8 from "./../../assets/clientLogo8.png";
 import client9 from "./../../assets/clientLogo9.png";
 import client10 from "./../../assets/clientLogo10.png";
-
+import { useNavigate } from "react-router-dom";
 export const HomePage = () => {
+  const navigate=useNavigate()
   const style = HomePageStyle;
   return (
     <>
@@ -27,7 +28,7 @@ export const HomePage = () => {
             </h2>
             <div className={style.buttonsHolder}>
               <button className="buttonOrange">Start for free</button>
-              <button className="buttonTransparent">Contact us</button>
+              <button className="buttonTransparent" onClick={()=>{navigate('/contact')}}>Contact us</button>
             </div>
           </div>
           <div className={style.mainHeroImgHolder}>
@@ -87,7 +88,7 @@ export const HomePage = () => {
                 everything is processed according to the regulations.
               </p>
             </div>
-            <button className="buttonOrange">Contact</button>
+            <button className="buttonOrange" onClick={()=>{navigate('/contact')}}>Contact</button>
           </div>
           <div className={style.mapHolder}>
             <img src={map} alt="Map" />
@@ -104,58 +105,38 @@ export const HomePage = () => {
           <img src={client8} alt="client1" />
           <img src={client9} alt="client1" />
           <img src={client10} alt="client1" />
-        </div>
-        <div className={style.secondSection}>
-          <p>Solutions</p>
-          <h1>Something for everyone</h1>
-          <div className={style.cardsHolder}>
-            <div className={style.card}>
-              <h1>Transformation</h1>
 
+          <div className={style.bigBannerContainer}>
+          <div className={style.upperTextHolder}>
+            <div className={style.bigBannerLeft}>
+              <h2>Solution</h2>
+              <h3>Global e-invoicing API integration</h3>
               <p>
-                {" "}
-                Data to e-invoice Global delivery Invoices stay on our cloud for
-                48h.
+                From just e-invoice creation&distribution to storage and
+                lowering your time to market with embedded options.
               </p>
-              <button className="buttonOrange">Read more</button>
-              <div className={style.blueHolder}>
-                For SaaS, ERPs & ISVs who only require compliance
-              </div>
+              <div><button className="buttonOrange">Read more</button></div>
             </div>
-
-            <div className={style.card}>
-              <h1>Integration</h1>
-              <h2>Full e-invoicing service </h2>
-              <p>
-                {" "}
-                While label UI Data to e-invoice Global delivery Management 10
-                year storage Automation
-              </p>
-              <button className="buttonOrange">Read more</button>
-              <div className={style.blueHolder}>
-                For SaaS, ERPs, ISV without their own cloud archive
-              </div>
+            <div className={style.bigBannerRight}>
+              <p>Choose what you need</p>
+              <ul>
+                <li>e-Invoice from data</li>
+                <li>global distribution</li>
+                <li>management</li>
+                <li>10 year cloud storage</li>
+                <li>embedded white label UI</li>
+                <li>automated workflows</li>
+              </ul>
             </div>
-
-            <div className={style.card}>
-              <h1>Custom</h1>
-
-              <p>
-                {" "}
-                Contact us for your specific invoicing/e-invoices/fiscalization
-                needs and we will create create a solution for you.
-              </p>
-              <button className="buttonOrange">Read more</button>
-              <div className={style.blueHolder}>
-                For large global suppliers, SaaS & ERP systems
-              </div>
-            </div>
-            <p className={style.smallLink}>
-              BUILD YOUR OWN - Use our powerful APIs to build you next
-              e-invoicing solution with lightning speed.
+          </div>
+          <div className={style.downTextHolder}>
+            <p>
+              For SaaS, ERPs, ISVs, accounting softwares, global suppliers etc.{" "}
             </p>
           </div>
         </div>
+        </div>
+      
         <div className={style.codeHolder}>
           <div className={style.code}>adasd</div>
           <div className={style.codeText}>

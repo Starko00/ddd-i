@@ -22,7 +22,7 @@ export const Navigation = () => {
           <ul className={style.menuItemsHolder}>
             <li
               className={style.innerListHolder}
-              onClick={() => navigate("products")}
+              
             >
               Products
               <div className={style.innerList}>
