@@ -7,11 +7,16 @@ export const Navigation = () => {
   const style = NavigationStyle;
   const navigate = useNavigate();
 
-  const [menuState,setMenuState] = useState(false)
+  const [menuState, setMenuState] = useState(false);
   return (
-    <div className={style.containerMother} >
-      <div className={style.menuIconsHolder} onClick={()=>{setMenuState(!menuState)}}>
-        <FiMenu className={style.menuIcon}  data-open={menuState}/>
+    <div className={style.containerMother}>
+      <div
+        className={style.menuIconsHolder}
+        onClick={() => {
+          setMenuState(!menuState);
+        }}
+      >
+        <FiMenu className={style.menuIcon} data-open={menuState} />
         <FiX className={style.menuClose} data-open={!menuState} />
       </div>
       <div className={style.container} data-open={menuState}>
@@ -21,32 +26,43 @@ export const Navigation = () => {
         <div className={style.menuItemsHolder}>
           <ul className={style.menuItemsHolder}>
             <li
-              className={style.innerListHolder}
-              
+              onClick={() => {
+                setMenuState(!menuState);
+                navigate("transformation");
+              }}
             >
-              Products
-              <div className={style.innerList}>
-                <ul>
-                  <li onClick={() => navigate("transformation")}>
-                    Transformation
-                  </li>
-                  <li onClick={() => navigate("integration")}>Integration</li>
-                  <li onClick={() => navigate("custom")}>Custom</li>
-                </ul>
-              </div>
+              Transformation
             </li>
-            <li onClick={() => navigate("build")}>Build</li>
+
+            <li
+              onClick={() => {
+                setMenuState(!menuState);
+                navigate("build");
+              }}
+            >
+              Build
+            </li>
             <li onClick={() => navigate("documentation")}>API Documentation</li>
-            <li onClick={() => navigate("pricing")}>Pricing</li>
+
             <li>
               <button
                 className={style.startForFree}
-                onClick={() => navigate("start")}
+                onClick={() => {
+                  setMenuState(!menuState);
+                  navigate("start");
+                }}
               >
                 Start for free
               </button>
             </li>
-            <li onClick={() => navigate("login")}>Login</li>
+            <li
+              onClick={() => {
+                setMenuState(!menuState);
+                navigate("login");
+              }}
+            >
+              Login
+            </li>
           </ul>
         </div>
       </div>

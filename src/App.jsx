@@ -7,6 +7,7 @@ import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { TransformationPage } from "./pages/home/TransformationPage";
 import { Contact } from "./pages/home/Contact";
+import { BuildPage } from "./pages/home/BuildPage";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/transformation" element={<TransformationPage/>}/>
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/build" element={<BuildPage/>}/>
           <Route path='*' element={<div>Not found</div>}/>
         </Routes>
         <Footer/>

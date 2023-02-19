@@ -1,12 +1,12 @@
 .pageContaienr {
   z-index: 1;
 }
-.limitContainer{
+.limitContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 .mainHeder {
   display: flex;
@@ -73,10 +73,10 @@
   justify-content: center;
   gap: 4.375rem;
 }
-.imgHolder{
+.imgHolder {
   max-width: 350px;
 }
-.imgHolder img{
+.imgHolder img {
   width: 100%;
 }
 .card {
@@ -290,6 +290,64 @@
   justify-content: center;
   height: 100%;
 }
+.smallSolution {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  max-width: 350px;
+}
+
+.smallSolutionsContainer h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.smallSolutionsContainer h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.smallSolutionsContainer p {
+  font-size: 1rem;
+  color: #238abe;
+  max-width: 80%;
+  text-align: center;
+}
+.smallSolutionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.largeButtonHolder {
+  min-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.largeButtonHolder button {
+  width: 100%;
+}
+
+.smallSolutionsHolder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 100px;
+  gap: 50px;
+  justify-content: center;
+}
+.smallSolution h4 {
+  font-size: 1.25rem;
+  text-align: left;
+  font-weight: 500;
+}
+.smallSolution p {
+  font-size: 1.25rem;
+  color: #238abe;
+  text-align: left;
+}
 
 @media only screen and (max-width: 950px) {
   .upperTextHolder {
@@ -297,14 +355,14 @@
     align-items: center;
     justify-content: center;
   }
-  .upperTextHolder h3{
+  .upperTextHolder h3 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
-  .upperTextHolder p{
+  .upperTextHolder p {
     font-size: 1rem;
   }
-  .bigBannerContainer{
+  .bigBannerContainer {
     max-width: 340px;
   }
   .mainHeder {

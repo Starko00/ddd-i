@@ -3,6 +3,13 @@ import mainBanner from "./../../assets/mainBanner.png";
 import stepsImg from "./../../assets/4steps.png";
 import invoice from "./../../assets/invoice.png";
 import { useNavigate } from "react-router-dom";
+import icon1 from './../../assets/icons/icon1.png'
+import icon2 from './../../assets/icons/icon2.png'
+import icon3 from './../../assets/icons/icon3.png'
+import icon4 from './../../assets/icons/icon4.png'
+import icon5 from './../../assets/icons/icon5.png'
+import icon6 from './../../assets/icons/icon6.png'
+import icon7 from './../../assets/icons/icon7.png'
 export const TransformationPage = () => {
   const style = HomePageStyle;
   const navigate = useNavigate();
@@ -104,47 +111,47 @@ export const TransformationPage = () => {
           <div className={style.smallSolutionsHolder}>
             {/* First */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon4} alt="" /></div>
               <h4>e-Invoice creation</h4>
               <p>We create a compliant e-invoice from invoice data send from your software in .JSON form.</p>
             </div>
 
 
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon7} alt="" /></div>
               <h4>Global distribution</h4>
               <p>Send to local tax authorities, global e-invoicing networks, email, PDF, .XML.</p>
             </div>
 
 
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon5} alt="" /></div>
               <h4>Management</h4>
               <p>Manage your/your clients e-invoices with a powerful management module.</p>
             </div>
 
 
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon1} alt="" /></div>
               <h4>Storage</h4>
               <p>Safely store for up to 10 years in digitally signed and legally approved archive.</p>
             </div>
 
 {/*  */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon2} alt="" /></div>
               <h4>Embedded options</h4>
               <p>Embed visualization or editable UI directly into software, branded with your logo.</p>
             </div>
             {/*  */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon3} alt="" /></div>
               <h4>Automation</h4>
               <p>Automate workflow of an e-invoice. Set it up once and never again. Simple and easy.</p>
             </div>
 
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}></div>
+              <div className={style.smallSolutionIconHolder}><img src={icon6} alt="" /></div>
               <h4>Much more</h4>
               <p>Find out other options we offer and adding every day.</p>
             </div>
