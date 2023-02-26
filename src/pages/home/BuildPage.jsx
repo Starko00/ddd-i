@@ -3,28 +3,48 @@ import mainBanner from "./../../assets/mainBanner.png";
 import puzzle from "../../assets/icons/puzzle.png";
 import pc from "../../assets/icons/pc.png";
 import { useNavigate } from "react-router-dom";
+import { InlineWidget } from "react-calendly";
+import { useState } from "react";
 export const BuildPage = () => {
   const style = HomePageStyle;
   const navigate = useNavigate();
+  const [displayContact, setDisplayContact] = useState(false);
   return (
     <div className={style.pageContaienr}>
+      <div className={style.contactContainer} data-showContact={displayContact}>
+        <InlineWidget
+          url="https://calendly.com/ddd-invoices/30min"
+          className={style.widget}
+        />{" "}
+        <div className={style.buttonHolderContact}>
+          {" "}
+          <button
+            className="buttonOrange"
+            onClick={() => {
+              setDisplayContact(!displayContact);
+            }}
+          >
+            Close
+          </button>{" "}
+        </div>
+      </div>
       <div className={style.mainHeder}>
         <div className={style.textHolder}>
           <h1>Building your own invoicing solution?</h1>
           <h2>
-            We offer more than 200 APIs with which we help you build an
-            invoicing solution with incredibly short time-to-market.
+            We offer more than 20 APIs with which we help you build an invoicing
+            solution with incredibly short time-to-market.
           </h2>
           <div className={style.buttonsHolder}>
-            <button className="buttonOrange">Start for free</button>
             <button
-              className="buttonTransparent"
+              className="buttonOrange"
               onClick={() => {
-                navigate("/contact");
+                setDisplayContact(!displayContact);
               }}
             >
-              Contact us
+              Talk to us
             </button>
+            <button className="buttonTransparent">Log in</button>
           </div>
         </div>
         <div className={style.mainHeroImgHolder}>
@@ -54,26 +74,31 @@ export const BuildPage = () => {
           <div className={style.left}>
             <h1 style={{ "max-width": "800px" }}>... you do the choosing.</h1>
             <div className={style.text}>
-              <p>Choose among 200 APIs and create your solution in days.</p>
+              <p>Choose among 20 APIs and create your solution in days.</p>
               <p>We offer APIs for:</p>
               <p>
                 <ul>
-                  <li> Read the documentation</li>
-                  <li>Register as a service provider</li>
-                  <li>
-                    Create your own API key and start testing in a sandbox
-                  </li>
-                  <li>Switch to production when ready to start e-invoicing</li>
+                  <li> use of our white label UI</li>
+                  <li> transformation from data to e-invoices</li>
+                  <li> transformation from data to fiscalized invoice</li>
+                  <li> transformation from invoice to e-invoice</li>
+                  <li> preparation of .PDF invoice </li>
+                  <li> distribution to domestic tax auhority portal</li>
+                  <li> distribution to PEPPOL network</li>
+                  <li> distribution over mail</li>
+                  <li> importing from servers to ERP</li>
+                  <li> archiving</li>
+                  <li>and much more ...</li>
                 </ul>
               </p>
             </div>
             <button
               className="buttonOrange"
               onClick={() => {
-                navigate("/contact");
+                setDisplayContact(!displayContact);
               }}
             >
-              Contact us
+              Talk to us
             </button>
           </div>
           <div className={style.mapHolder}>

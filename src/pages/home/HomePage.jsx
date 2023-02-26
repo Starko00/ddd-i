@@ -11,24 +11,54 @@ import client7 from "./../../assets/clientLogo7.png";
 import client8 from "./../../assets/clientLogo8.png";
 import client9 from "./../../assets/clientLogo9.png";
 import client10 from "./../../assets/clientLogo10.png";
+import { InlineWidget } from "react-calendly";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 export const HomePage = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const style = HomePageStyle;
+  const [displayContact, setDisplayContact] = useState(false);
   return (
     <>
       {" "}
       <div className={style.pageContaienr}>
+        <div
+          className={style.contactContainer}
+          data-showContact={displayContact}
+        >
+          <InlineWidget
+            url="https://calendly.com/ddd-invoices/30min"
+            className={style.widget}
+          />{" "}
+          <div className={style.buttonHolderContact}>
+            {" "}
+            <button
+              className="buttonOrange"
+              onClick={() => {
+                setDisplayContact(!displayContact);
+              }}
+            >
+              Close
+            </button>{" "}
+          </div>
+        </div>
         <div className={style.mainHeder}>
           <div className={style.textHolder}>
             <h1>Global e-invoicing for your business</h1>
             <h2>
-              Comply with local & global e-invoicing regulations with 1 API.
-              Integrate with ERPs, SaaS, accounting softwares & more.{" "}
+              Integrate 1 API into your SaaS, ERP or invoicing softwares and
+              instantly comply with local & global e-invoicing regulations.
             </h2>
             <div className={style.buttonsHolder}>
-              <button className="buttonOrange">Start for free</button>
-              <button className="buttonTransparent" onClick={()=>{navigate('/contact')}}>Contact us</button>
+              <button className="buttonOrange"   onClick={() => {
+                setDisplayContact(!displayContact);
+              }}>Talk to us</button>
+              <button
+                className="buttonTransparent"
+              
+              >
+                Log in
+              </button>
             </div>
           </div>
           <div className={style.mainHeroImgHolder}>
@@ -57,9 +87,9 @@ export const HomePage = () => {
               <h2>From developers for developers</h2>
               <p>
                 {" "}
-                Completely hidden behind your UI, we quietly take care for all
-                your/your clients invoices. Built with developers in mind the
-                integrations is done in hours.
+                Easily comply and distribute e-invoices globally.Give us invoice
+                data and we will make sure to distribute in correct local
+                format.
               </p>
               <button className="buttonOrange">Read more</button>
             </div>
@@ -88,7 +118,14 @@ export const HomePage = () => {
                 everything is processed according to the regulations.
               </p>
             </div>
-            <button className="buttonOrange" onClick={()=>{navigate('/contact')}}>Contact</button>
+            <button
+              className="buttonOrange"
+              onClick={() => {
+                setDisplayContact(!displayContact);
+              }}
+            >
+              Contact
+            </button>
           </div>
           <div className={style.mapHolder}>
             <img src={map} alt="Map" />
@@ -107,36 +144,39 @@ export const HomePage = () => {
           <img src={client10} alt="client1" />
 
           <div className={style.bigBannerContainer}>
-          <div className={style.upperTextHolder}>
-            <div className={style.bigBannerLeft}>
-              <h2>Solution</h2>
-              <h3>Global e-invoicing API integration</h3>
+            <div className={style.upperTextHolder}>
+              <div className={style.bigBannerLeft}>
+                <h2>Solution</h2>
+                <h3>Global e-invoicing API integration</h3>
+                <p>
+                  From e-invoice creation & distribution, secure storage to
+                  white label UI embedding options.
+                </p>
+                <div>
+                  <button className="buttonOrange">See the solution</button>
+                </div>
+              </div>
+              <div className={style.bigBannerRight}>
+                <p>Choose what you need</p>
+                <ul>
+                  <li>e-Invoice from data</li>
+                  <li>global distribution</li>
+                  <li>management</li>
+                  <li>10 year cloud storage</li>
+                  <li>embedded white label UI</li>
+                  <li>automated workflows</li>
+                </ul>
+              </div>
+            </div>
+            <div className={style.downTextHolder}>
               <p>
-                From just e-invoice creation&distribution to storage and
-                lowering your time to market with embedded options.
+                For SaaS, ERPs, ISVs, accounting softwares, global suppliers
+                etc.{" "}
               </p>
-              <div><button className="buttonOrange">Read more</button></div>
-            </div>
-            <div className={style.bigBannerRight}>
-              <p>Choose what you need</p>
-              <ul>
-                <li>e-Invoice from data</li>
-                <li>global distribution</li>
-                <li>management</li>
-                <li>10 year cloud storage</li>
-                <li>embedded white label UI</li>
-                <li>automated workflows</li>
-              </ul>
             </div>
           </div>
-          <div className={style.downTextHolder}>
-            <p>
-              For SaaS, ERPs, ISVs, accounting softwares, global suppliers etc.{" "}
-            </p>
-          </div>
         </div>
-        </div>
-      
+
         <div className={style.codeHolder}>
           <div className={style.code}>adasd</div>
           <div className={style.codeText}>
@@ -145,7 +185,7 @@ export const HomePage = () => {
 
             <p>
               We worked hard to give you the most powerful solution with as
-              little integration trouble as possible. Explore whole API
+              little integration trouble as possible.Explore whole API
               documentation and get up and running in hours.
             </p>
             <button className="buttonOrange">Read the docs</button>

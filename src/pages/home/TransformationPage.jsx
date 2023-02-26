@@ -3,35 +3,55 @@ import mainBanner from "./../../assets/mainBanner.png";
 import stepsImg from "./../../assets/4steps.png";
 import invoice from "./../../assets/invoice.png";
 import { useNavigate } from "react-router-dom";
-import icon1 from './../../assets/icons/icon1.png'
-import icon2 from './../../assets/icons/icon2.png'
-import icon3 from './../../assets/icons/icon3.png'
-import icon4 from './../../assets/icons/icon4.png'
-import icon5 from './../../assets/icons/icon5.png'
-import icon6 from './../../assets/icons/icon6.png'
-import icon7 from './../../assets/icons/icon7.png'
+import icon1 from "./../../assets/icons/icon1.svg";
+import icon2 from "./../../assets/icons/icon2.svg";
+import icon3 from "./../../assets/icons/icon3.svg";
+import icon4 from "./../../assets/icons/icon4.svg";
+import { useState } from "react";
+import { InlineWidget } from "react-calendly";
+import icon5 from "./../../assets/icons/icon5.svg";
+
+import icon7 from "./../../assets/icons/icon7.svg";
 export const TransformationPage = () => {
   const style = HomePageStyle;
   const navigate = useNavigate();
+  const [displayContact, setDisplayContact] = useState(false);
   return (
     <div className={style.pageContaienr}>
+      <div className={style.contactContainer} data-showContact={displayContact}>
+        <InlineWidget
+          url="https://calendly.com/ddd-invoices/30min"
+          className={style.widget}
+        />{" "}
+        <div className={style.buttonHolderContact}>
+          {" "}
+          <button
+            className="buttonOrange"
+            onClick={() => {
+              setDisplayContact(!displayContact);
+            }}
+          >
+            Close
+          </button>{" "}
+        </div>
+      </div>
       <div className={style.mainHeder}>
         <div className={style.textHolder}>
-          <h1>Transformation of invoice data to e-invoices</h1>
+          <h1>1 API for all invoicing requirements</h1>
           <h2>
-            Connect your software and send us invoice data. We will create a
-            compliant e-invoice and deliver it globally.{" "}
+            Integrate our API to send us invoice data.We create a compliant
+            e-invoice, deliver it globally and store it on our secured cloud.
           </h2>
           <div className={style.buttonsHolder}>
-            <button className="buttonOrange">Start for free</button>
             <button
-              className="buttonTransparent"
+              className="buttonOrange"
               onClick={() => {
-                navigate("/contact");
+                setDisplayContact(!displayContact);
               }}
             >
-              Contact us
+              Talk to us
             </button>
+            <button className="buttonTransparent">Log in</button>
           </div>
         </div>
         <div className={style.mainHeroImgHolder}>
@@ -51,14 +71,16 @@ export const TransformationPage = () => {
                 Connecting your software to e-invoicing API is a simple process.{" "}
               </p>
               <ol>
-                <li> Read the documentation</li>
+                <li>Read the documentation</li>
                 <li>Register as a service provider</li>
                 <li>Create your own API key and start testing in a sandbox</li>
                 <li>Switch to production when ready to start e-invoicing</li>
               </ol>
             </div>
-
-            <button className="buttonOrange">Read the docs</button>
+            <div className={style.buttonsHolder}>
+              <button className="buttonOrange">Start for free</button>{" "}
+              <button className="buttonOrange">Read the docs</button>
+            </div>
           </div>
         </div>
 
@@ -70,15 +92,14 @@ export const TransformationPage = () => {
             <div className={style.text}>
               <p>
                 Never worry about local or international regulations, formats or
-                syntaxes regarding invoices. Connect to global e-invoicing
-                networks (PEPPOL) and tax authorities. Give your software a
-                global e-invoicing ability. Forever.
+                syntaxes regarding invoices. Connect to local tax authorities &
+                global e-invoicing networks and stay compliant - forever.
               </p>
             </div>
             <button
               className="buttonOrange"
               onClick={() => {
-                navigate("/contact");
+                setDisplayContact(!displayContact);
               }}
             >
               Contact
@@ -92,75 +113,100 @@ export const TransformationPage = () => {
         <div className={style.codeHolder}>
           <div className={style.code}>adasd</div>
           <div className={style.codeText}>
-            <h1>We stay completely hidden behind your UI</h1>
+            <h1>Completely hidden behind your UI</h1>
 
             <p>
-              Your customers will never leave your solution, so you maintain the
-              whole user experience journey. This allows you to focus on what
-              you are the best at and leave the boring part to us.
+              YYour customers will never leave your solution, so you maintain
+              the whole user experience journey. This allows you to focus on
+              what you are best at and leave the boring part to us. We will
+              provide you with the management module, where you can take care of
+              invoices for you or your clients if neccessary.
             </p>
-
-            <button className="buttonOrange">Start for free</button>
           </div>
         </div>
         <div className={style.smallSolutionsContainer}>
-          <h2>Solution</h2>
           <h3>Adjustable to your needs</h3>
-          <p>Different levels of integrations to provide compliant invoicing for SaaS, ERsP, accounting softwares or enterprises and global suppliers..</p>
+          <p>
+            Different levels of integrations to provide compliant invoicing for
+            SaaS, ERsP, accounting softwares or enterprises and global
+            suppliers.
+          </p>
 
           <div className={style.smallSolutionsHolder}>
             {/* First */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon4} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon4} alt="" />
+              </div>
               <h4>e-Invoice creation</h4>
-              <p>We create a compliant e-invoice from invoice data send from your software in .JSON form.</p>
+              <p>
+                We create a compliant e-invoice from invoice data send from your
+                software in .JSON form.
+              </p>
             </div>
 
-
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon7} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon7} alt="" />
+              </div>
               <h4>Global distribution</h4>
-              <p>Send to local tax authorities, global e-invoicing networks, email, PDF, .XML.</p>
+              <p>
+                Send to local tax authorities, global e-invoicing networks,
+                email, PDF, .XML.
+              </p>
             </div>
 
-
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon5} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon5} alt="" />
+              </div>
               <h4>Management</h4>
-              <p>Manage your/your clients e-invoices with a powerful management module.</p>
+              <p>
+                Manage your clients e-invoices with a powerful management
+                module.
+              </p>
             </div>
 
-
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon1} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon1} alt="" />
+              </div>
               <h4>Storage</h4>
-              <p>Safely store for up to 10 years in digitally signed and legally approved archive.</p>
+              <p>
+                Safely store for up to 10 years in digitally signed and legally
+                approved archive.
+              </p>
             </div>
 
-{/*  */}
+            {/*  */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon2} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon2} alt="" />
+              </div>
               <h4>Embedded options</h4>
-              <p>Embed visualization or editable UI directly into software, branded with your logo.</p>
+              <p>
+                Embed visualization or editable UI directly into software,
+                branded with your logo.
+              </p>
             </div>
             {/*  */}
             <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon3} alt="" /></div>
+              <div className={style.smallSolutionIconHolder}>
+                <img src={icon3} alt="" />
+              </div>
               <h4>Automation</h4>
-              <p>Automate workflow of an e-invoice. Set it up once and never again. Simple and easy.</p>
+              <p>
+                Automate workflow of an e-invoice. Set it up once and never
+                again. Simple and easy.
+              </p>
             </div>
-
-            <div className={style.smallSolution}>
-              <div className={style.smallSolutionIconHolder}><img src={icon6} alt="" /></div>
-              <h4>Much more</h4>
-              <p>Find out other options we offer and adding every day.</p>
-            </div>
-
-
           </div>
 
-          <div className={style.largeButtonHolder}><button className="buttonOrange">Contact us</button></div>
-              
+          <div className={style.largeButtonHolder}>
+            <button className="buttonOrange">
+              Learn more about our features
+            </button>
+          </div>
         </div>
         <div className={style.secondSection}>
           <p>Why DDD invoicing</p>

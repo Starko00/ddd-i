@@ -1,6 +1,29 @@
 .pageContaienr {
   z-index: 1;
 }
+.buttonHolderContact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px ;
+}
+.contactContainer[data-showContact="true"] {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.61);
+
+  backdrop-filter: blur(5px);
+}
+.contactContainer[data-showContact="false"] {
+  display: none;
+}
+
 .limitContainer {
   display: flex;
   flex-direction: column;
@@ -90,7 +113,7 @@
   gap: 1rem;
   position: relative;
   background: #ffffff;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 }
 .card h1 {
@@ -208,7 +231,7 @@
   max-width: 1080px;
   flex-direction: column;
 
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   align-items: center;
   margin-top: 50px;
@@ -450,7 +473,7 @@
     gap: 1rem;
 
     background: #ffffff;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
   }
   .card h1 {
