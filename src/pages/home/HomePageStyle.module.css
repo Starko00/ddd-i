@@ -1,6 +1,10 @@
 .pageContaienr {
   z-index: 1;
 }
+.code img{
+  width: 100%;
+  object-fit: cover;
+}
 .buttonHolderContact{
   display: flex;
   align-items: center;
@@ -11,7 +15,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-
+  top: 0rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -287,16 +291,13 @@
 .bigBannerRight ul li {
   position: relative;
 }
-.bigBannerRight ul li::before {
-  content: " ";
-  width: 15px;
-  left: -1.5rem;
-
-  top: 0.25rem;
-  height: 15px;
-  border-radius: 100rem;
-  background-color: green;
-  position: absolute;
+.bigBannerRight li{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bigBannerRight li .tick{
+  color: #56BC85;
 }
 .bigBannerRight p {
   font-size: 1.5rem;

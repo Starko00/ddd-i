@@ -1,6 +1,8 @@
 import HomePageStyle from "./HomePageStyle.module.css";
 import mainBanner from "./../../assets/mainBanner.png";
 import map from "./../../assets/map.png";
+
+import { BsFillCheckCircleFill } from "react-icons/bs";
 import client1 from "./../../assets/clientLogo1.png";
 import client2 from "./../../assets/clientLogo2.png";
 import client3 from "./../../assets/clientLogo3.png";
@@ -44,7 +46,7 @@ export const HomePage = () => {
         </div>
         <div className={style.mainHeder}>
           <div className={style.textHolder}>
-            <h1>Global e-invoicing for your business</h1>
+            <h1>Global <span style={{"whiteSpace":"nowrap"}}>e-invoicing</span>  for your business</h1>
             <h2>
               Integrate 1 API into your SaaS, ERP or invoicing softwares and
               instantly comply with local & global e-invoicing regulations.
@@ -65,17 +67,17 @@ export const HomePage = () => {
             <img src={mainBanner} />
           </div>
         </div>
-
+            
         <div className={style.secondSection}>
-          <p>Ensure compliance - forever</p>
-          <h1>Main features</h1>
+          <p>Features</p>
+          <h1>Ensured compliance - forever</h1>
           <div className={style.cardsHolder}>
             <div className={style.card}>
               <h1>Compliance & Tax</h1>
               <h2>E-invoices & real-time reporting</h2>
               <p>
                 {" "}
-                Easily comply and distribute e-invoices globally.Give us invoice
+                Easily comply and distribute e-invoices globally.<br/><br/>Give us invoice
                 data and we will make sure to distribute in correct local
                 format.
               </p>
@@ -87,20 +89,17 @@ export const HomePage = () => {
               <h2>From developers for developers</h2>
               <p>
                 {" "}
-                Easily comply and distribute e-invoices globally.Give us invoice
-                data and we will make sure to distribute in correct local
-                format.
+                Completely hidden behind your UI, we quietly take care for all your/your clients invoices.
+Built with developers in mind the integrations is done in hours.
               </p>
               <button className="buttonOrange">Read more</button>
             </div>
 
             <div className={style.card}>
               <h1>Connectivity</h1>
-              <h2>No more troubles</h2>
+              <h2>Instant communication</h2>
               <p>
-                Send to local tax authorities, clients, PEPPOL and more.Never
-                worry about standards, tax rates, VAT, rounding errors,
-                validations, calculations again.
+              Send to local tax authorities, clients, PEPPOL and more.Never worry about standards, tax rates, VAT, rounding errors, validations, calculations again.
               </p>
               <button className="buttonOrange">Read more</button>
             </div>
@@ -124,7 +123,7 @@ export const HomePage = () => {
                 setDisplayContact(!displayContact);
               }}
             >
-              Contact
+              Talk to us
             </button>
           </div>
           <div className={style.mapHolder}>
@@ -159,12 +158,12 @@ export const HomePage = () => {
               <div className={style.bigBannerRight}>
                 <p>Choose what you need</p>
                 <ul>
-                  <li>e-Invoice from data</li>
-                  <li>global distribution</li>
-                  <li>management</li>
-                  <li>10 year cloud storage</li>
-                  <li>embedded white label UI</li>
-                  <li>automated workflows</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>  e-Invoice from data</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>global distribution</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>management</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>10 year cloud storage</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>embedded white label UI</li>
+                  <li><BsFillCheckCircleFill className={style.tick}/>automated workflows</li>
                 </ul>
               </div>
             </div>

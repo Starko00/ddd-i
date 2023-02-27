@@ -28,6 +28,8 @@
   background: #00558300;
   border: none;
   color: white;
+  border: 1px solid #E8490E;
+  min-width: 125px;
   font-size: 1rem;
 }
 .buttonOrange:hover{
@@ -40,3 +42,24 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #238abe #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #238abe;
+    border-radius: 8px;
+    border: 0px none #ffffff;
+  }

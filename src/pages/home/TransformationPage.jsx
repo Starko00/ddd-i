@@ -9,6 +9,7 @@ import icon3 from "./../../assets/icons/icon3.svg";
 import icon4 from "./../../assets/icons/icon4.svg";
 import { useState } from "react";
 import { InlineWidget } from "react-calendly";
+import bScenes from "./../../assets/bScenes.png"
 import icon5 from "./../../assets/icons/icon5.svg";
 
 import icon7 from "./../../assets/icons/icon7.svg";
@@ -68,7 +69,9 @@ export const TransformationPage = () => {
             <h1>How to get started?</h1>
             <div className={style.stepsHolder}>
               <p>
+                <br/>
                 Connecting your software to e-invoicing API is a simple process.{" "}
+                <br/>
               </p>
               <ol>
                 <li>Read the documentation</li>
@@ -111,20 +114,20 @@ export const TransformationPage = () => {
         </div>
 
         <div className={style.codeHolder}>
-          <div className={style.code}>adasd</div>
+          <div className={style.code}><img src={bScenes} alt="" /></div>
           <div className={style.codeText}>
             <h1>Completely hidden behind your UI</h1>
 
             <p>
-              YYour customers will never leave your solution, so you maintain
+              Your customers will never leave your solution, so you maintain
               the whole user experience journey. This allows you to focus on
-              what you are best at and leave the boring part to us. We will
+              what you are best at and leave the boring part to us.<br/><br/> We will
               provide you with the management module, where you can take care of
               invoices for you or your clients if neccessary.
             </p>
           </div>
         </div>
-        <div className={style.smallSolutionsContainer}>
+        <div className={style.smallSolutionsContainer} style={{"maxWidth":"1200px"}}>
           <h3>Adjustable to your needs</h3>
           <p>
             Different levels of integrations to provide compliant invoicing for
